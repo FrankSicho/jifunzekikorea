@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korean Quiz | JifunzeKikorea</title>
+    <meta name="description" content="Test your Korean vocabulary with a quick interactive quiz.">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"><script src="site-shell.js" defer></script><script src="script.js" defer></script>
+</head>
+<body data-page="quizzes">
+<div id="site-header"></div>
+<main class="page-main quiz-page">
+    <section class="page-intro"><span class="section-label">PRACTICE YOUR SKILLS</span><h1>What do you remember?</h1><p>Choose an answer, check your result and keep building your Korean vocabulary.</p></section>
+    <section class="quiz-stage">
+        <div class="quiz-welcome" id="quizWelcome"><span class="quiz-stamp">한</span><h2>Ready for a quick check?</h2><p>Seven questions. One step closer to confident Korean.</p><button class="mock-primary" type="button" onclick="startQuiz()">Start quiz <span>→</span></button></div>
+        <div class="quiz-box" id="quizBox" hidden>
+            <div class="quiz-progress-line"><span id="quizProgress">Question 1</span><span id="quizScore">Score: 0</span></div>
+            <h2 id="quizQuestion">What does 안녕하세요 mean?</h2>
+            <div id="quizOptions" class="quiz-options"></div>
+            <div id="quizResult" aria-live="polite"></div>
+            <button id="quizNext" class="mock-primary" type="button" hidden>Next <span>→</span></button>
+        </div>
+    </section>
+</main>
+<div id="site-footer"></div>
+</body>
+</html>

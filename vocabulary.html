@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korean Vocabulary | JifunzeKikorea</title>
+    <meta name="description" content="Learn Korean vocabulary with English and Kiswahili translations.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="site-shell.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body data-page="vocabulary">
+<div id="site-header"></div>
+<main class="page-main">
+    <section class="page-intro"><span class="section-label">WORD BY WORD</span><h1>Build your vocabulary</h1><p>Choose a category to explore Korean words, pronunciation, English meanings and Kiswahili translations.</p></section>
+    <section class="vocabulary-page-section">
+        <label class="vocabulary-search-label" for="vocabularySearch">Search the selected category</label>
+        <div class="vocabulary-tools"><input type="search" id="vocabularySearch" placeholder="Search Korean, English or Kiswahili" autocomplete="off"><select id="categoryFilter" hidden><option value="all">All categories</option></select></div>
+        <p class="vocabulary-status"><span id="vocabularyCount">Choose a category to start learning</span></p>
+        <div class="vocabulary-list" id="vocabulary-list"></div>
+        <div class="vocabulary-empty" id="vocabularyEmpty" hidden><h2>No words found</h2><p>Try a different search.</p></div>
+    </section>
+</main>
+<div id="site-footer"></div>
+</body>
+</html>

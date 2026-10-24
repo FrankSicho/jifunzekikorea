@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Hangul | JifunzeKikorea</title>
+    <meta name="description" content="Explore Korean Hangul consonants, vowels and pronunciation.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="site-shell.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body data-page="hangul">
+<div id="site-header"></div>
+<main class="page-main">
+    <section class="page-intro"><span class="section-label">KOREAN ALPHABET</span><h1>Meet Hangul</h1><p>Hangul is a logical writing system built from consonants and vowels. Select a character to hear its sound.</p></section>
+    <section class="alphabet-panel">
+        <div class="alphabet-heading"><div><h2>Basic consonants</h2><p>Consonant sounds can change slightly depending on where they appear in a word.</p></div><span class="alphabet-count">14 letters</span></div>
+        <div class="alphabet-grid">
+            <button class="alphabet-tile" onclick="speak('ㄱ')"><strong>ㄱ</strong><span>g / k</span></button><button class="alphabet-tile" onclick="speak('ㄴ')"><strong>ㄴ</strong><span>n</span></button><button class="alphabet-tile" onclick="speak('ㄷ')"><strong>ㄷ</strong><span>d / t</span></button><button class="alphabet-tile" onclick="speak('ㄹ')"><strong>ㄹ</strong><span>r / l</span></button><button class="alphabet-tile" onclick="speak('ㅁ')"><strong>ㅁ</strong><span>m</span></button><button class="alphabet-tile" onclick="speak('ㅂ')"><strong>ㅂ</strong><span>b / p</span></button><button class="alphabet-tile" onclick="speak('ㅅ')"><strong>ㅅ</strong><span>s</span></button><button class="alphabet-tile" onclick="speak('ㅇ')"><strong>ㅇ</strong><span>silent / ng</span></button><button class="alphabet-tile" onclick="speak('ㅈ')"><strong>ㅈ</strong><span>j</span></button><button class="alphabet-tile" onclick="speak('ㅊ')"><strong>ㅊ</strong><span>ch</span></button><button class="alphabet-tile" onclick="speak('ㅋ')"><strong>ㅋ</strong><span>k</span></button><button class="alphabet-tile" onclick="speak('ㅌ')"><strong>ㅌ</strong><span>t</span></button><button class="alphabet-tile" onclick="speak('ㅍ')"><strong>ㅍ</strong><span>p</span></button><button class="alphabet-tile" onclick="speak('ㅎ')"><strong>ㅎ</strong><span>h</span></button>
+        </div>
+    </section>
+    <section class="alphabet-panel">
+        <div class="alphabet-heading"><div><h2>Basic vowels</h2><p>Start with the ten foundational vowel sounds.</p></div><span class="alphabet-count">10 letters</span></div>
+        <div class="alphabet-grid vowel-grid">
+            <button class="alphabet-tile" onclick="speak('ㅏ')"><strong>ㅏ</strong><span>a</span></button><button class="alphabet-tile" onclick="speak('ㅑ')"><strong>ㅑ</strong><span>ya</span></button><button class="alphabet-tile" onclick="speak('ㅓ')"><strong>ㅓ</strong><span>eo</span></button><button class="alphabet-tile" onclick="speak('ㅕ')"><strong>ㅕ</strong><span>yeo</span></button><button class="alphabet-tile" onclick="speak('ㅗ')"><strong>ㅗ</strong><span>o</span></button><button class="alphabet-tile" onclick="speak('ㅛ')"><strong>ㅛ</strong><span>yo</span></button><button class="alphabet-tile" onclick="speak('ㅜ')"><strong>ㅜ</strong><span>u</span></button><button class="alphabet-tile" onclick="speak('ㅠ')"><strong>ㅠ</strong><span>yu</span></button><button class="alphabet-tile" onclick="speak('ㅡ')"><strong>ㅡ</strong><span>eu</span></button><button class="alphabet-tile" onclick="speak('ㅣ')"><strong>ㅣ</strong><span>i</span></button>
+        </div>
+    </section>
+    <section class="syllable-callout"><div><span class="section-label">PUT IT TOGETHER</span><h2>Letters form syllable blocks</h2><p>Combine a consonant and a vowel to read a Korean syllable.</p></div><div class="syllable-example"><strong>ㅎ + ㅏ + ㄴ</strong><span>한</span><small>han</small></div></section>
+</main>
+<div id="site-footer"></div>
+</body>
+</html>
