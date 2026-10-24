@@ -24,13 +24,13 @@
 <div id="site-header"></div>
 
 <main>
-<section class="mock-hero" id="home">
+<section class="mock-hero" id="home" data-site-background="heroBackground">
     <div class="mock-hero-inner">
         <div class="mock-hero-copy">
-            <h1>Jifunze<span>Kikorea</span> <b aria-label="South Korean flag">🇰🇷</b></h1>
-            <p class="mock-script">with <span>KoreanWithVanrosa</span></p>
-            <h2>Learn Korean in English &amp; Kiswahili</h2>
-            <p class="mock-description">Learn Korean step by step with simple lessons, real conversations,<br class="desktop-break"> interactive quizzes and beautiful Korean culture.</p>
+            <h1><span data-site-field="heroPrefix">Jifunze</span><span data-site-field="heroAccent">Kikorea</span> <b aria-label="South Korean flag">🇰🇷</b></h1>
+            <p class="mock-script">with <span data-site-field="heroByline">KoreanWithVanrosa</span></p>
+            <h2 data-site-field="heroSubheading">Learn Korean in English &amp; Kiswahili</h2>
+            <p class="mock-description" data-site-field="heroDescription">Learn Korean step by step with simple lessons, real conversations, interactive quizzes and beautiful Korean culture.</p>
             <div class="mock-hero-actions">
                 <a class="mock-primary" href="lessons.html"><span aria-hidden="true">▶</span> Start Learning</a>
                 <a class="mock-secondary" href="lessons.html"><span aria-hidden="true">▣</span> Explore Lessons</a>
@@ -42,7 +42,7 @@
                 <div><span class="proof-icon proof-pink">♥</span><strong>Korean Culture</strong><small>and More</small></div>
             </div>
         </div>
-        <img class="mock-portrait" src="portrait-hero.png" alt="Dafrosa Raymond wearing a Korean hanbok">
+        <img class="mock-portrait" src="portrait-hero.png" data-site-image="heroPortrait" alt="Dafrosa Raymond wearing a Korean hanbok">
         <div class="mock-greeting"><strong>안녕하세요!</strong><small>Hello! (In Korean)</small></div>
         <div class="mock-note"><strong>From Tanzania to Korea</strong><span>Let's learn together!</span><small>🇹🇿 <b>♥</b> 🇰🇷</small></div>
     </div>
@@ -696,6 +696,17 @@
 
 </footer>
 
-
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+    if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+            if (!user) {
+                window.netlifyIdentity.on("login", () => {
+                    window.location.href = "/admin/";
+                });
+            }
+        });
+    }
+</script>
 </body>
 </html>

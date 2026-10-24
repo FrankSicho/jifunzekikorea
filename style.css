@@ -1743,7 +1743,7 @@ footer {
     width: 58%;
     background:
         linear-gradient(110deg, rgba(255, 248, 251, 0.34), rgba(234, 244, 255, 0.22)),
-        url("hero-blossoms.jpg") center 45% / cover no-repeat;
+        var(--hero-background, url("hero-blossoms.jpg")) center 45% / cover no-repeat;
     opacity: 0.64;
     -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.55) 22%, #000 55%);
     mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.55) 22%, #000 55%);

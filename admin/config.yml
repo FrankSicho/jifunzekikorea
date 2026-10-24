@@ -1,0 +1,83 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "site"
+    label: "Site settings"
+    files:
+      - name: "site_content"
+        label: "Site content"
+        file: "content/site.json"
+        format: "json"
+        fields:
+          - { label: "Brand name", name: "brandName", widget: "string" }
+          - { label: "Brand accent", name: "brandAccent", widget: "string" }
+          - { label: "Brand byline", name: "brandByline", widget: "string" }
+          - { label: "Brand tagline", name: "brandTagline", widget: "string" }
+          - { label: "YouTube URL", name: "youtubeUrl", widget: "string", required: false }
+          - { label: "TikTok URL", name: "tiktokUrl", widget: "string", required: false }
+          - { label: "Instagram URL", name: "instagramUrl", widget: "string", required: false }
+          - { label: "Home hero prefix", name: "heroPrefix", widget: "string" }
+          - { label: "Home hero accent", name: "heroAccent", widget: "string" }
+          - { label: "Home hero byline", name: "heroByline", widget: "string" }
+          - { label: "Home hero subheading", name: "heroSubheading", widget: "string" }
+          - { label: "Home hero description", name: "heroDescription", widget: "text" }
+          - { label: "Home hero background image", name: "heroBackground", widget: "image" }
+          - { label: "Home hero portrait", name: "heroPortrait", widget: "image" }
+          - { label: "About eyebrow", name: "aboutEyebrow", widget: "string" }
+          - { label: "About introduction", name: "aboutKicker", widget: "string" }
+          - { label: "About headline", name: "aboutHeadline", widget: "string" }
+          - { label: "About lead", name: "aboutLead", widget: "text" }
+          - { label: "About story", name: "aboutStory", widget: "text" }
+          - { label: "About mission", name: "aboutMission", widget: "text" }
+          - { label: "Creator photo", name: "creatorPhoto", widget: "image" }
+
+  - name: "learning"
+    label: "Learning content"
+    files:
+      - name: "learning_data"
+        label: "Words, quizzes and vocabulary"
+        file: "content/learning-data.json"
+        format: "json"
+        fields:
+          - label: "Vocabulary categories"
+            name: "categories"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Category name", name: "name", widget: "string" }
+              - { label: "Icon", name: "icon", widget: "string" }
+          - label: "Words of the day"
+            name: "wordsOfTheDay"
+            widget: "list"
+            summary: "{{fields.korean}} — {{fields.english}}"
+            fields:
+              - { label: "Korean", name: "korean", widget: "string" }
+              - { label: "Romanization", name: "romanization", widget: "string" }
+              - { label: "English", name: "english", widget: "string" }
+              - { label: "Swahili", name: "swahili", widget: "string" }
+          - label: "Quiz questions"
+            name: "quizQuestions"
+            widget: "list"
+            summary: "{{fields.question}}"
+            fields:
+              - { label: "Question", name: "question", widget: "string" }
+              - label: "Answer choices"
+                name: "options"
+                widget: "list"
+                field: { label: "Choice", name: "choice", widget: "string" }
+              - { label: "Correct answer", name: "answer", widget: "string" }
+          - label: "Vocabulary words"
+            name: "vocabulary"
+            widget: "list"
+            summary: "{{fields.korean}} — {{fields.english}}"
+            fields:
+              - { label: "Category", name: "category", widget: "string" }
+              - { label: "Korean", name: "korean", widget: "string" }
+              - { label: "Romanization", name: "romanization", widget: "string" }
+              - { label: "English", name: "english", widget: "string" }
+              - { label: "Swahili", name: "swahili", widget: "string" }

@@ -85,7 +85,7 @@ function speak(text) {
    WORD OF THE DAY
 ========================================= */
 
-const wordsOfTheDay = [
+let wordsOfTheDay = [
 
     {
         korean: "안녕하세요",
@@ -170,7 +170,7 @@ showWordOfTheDay();
    QUIZ DATA
 ========================================= */
 
-const quizQuestions = [
+let quizQuestions = [
 
     {
         question: "What does 안녕하세요 mean?",
@@ -497,7 +497,7 @@ console.log(
    300 KOREAN VOCABULARY DATABASE
 ========================================= */
 
-const vocabulary = [
+let vocabulary = [
 
     /* =========================
        1. COLOURS — 20
@@ -899,7 +899,7 @@ const categoryFilter = document.getElementById("categoryFilter");
 const vocabularyCount = document.getElementById("vocabularyCount");
 const vocabularyEmpty = document.getElementById("vocabularyEmpty");
 
-const categoryIcons = {
+let categoryIcons = {
     "Colours": "🎨",
     "Days": "📅",
     "Months": "🗓️",
@@ -915,7 +915,7 @@ const categoryIcons = {
     "Feelings & Common Words": "😊"
 };
 
-const categoryNames = Object.keys(categoryIcons);
+let categoryNames = Object.keys(categoryIcons);
 let activeVocabularyCategory = null;
 
 function getCategoryIcon(category, word) {
@@ -1032,3 +1032,25 @@ if (categoryFilter) {
 }
 
 showCategoryChooser();
+
+async function loadLearningData() {
+    try {
+        const response = await fetch("content/learning-data.json");
+        if (!response.ok) throw new Error("Learning data could not be loaded.");
+
+        const data = await response.json();
+        wordsOfTheDay = data.wordsOfTheDay;
+        quizQuestions = data.quizQuestions;
+        vocabulary = data.vocabulary;
+        categoryIcons = Object.fromEntries(data.categories.map(category => [category.name, category.icon]));
+        categoryNames = data.categories.map(category => category.name);
+
+        showWordOfTheDay();
+        if (quizQuestion && quizOptions) showQuestion();
+        if (vocabularyList) showCategoryChooser();
+    } catch (error) {
+        console.warn("Using built-in learning data:", error.message);
+    }
+}
+
+loadLearningData();
