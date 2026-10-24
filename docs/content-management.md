@@ -1,6 +1,6 @@
 # Editing site content
 
-The site has a private content manager at `/admin/`. It lets invited editors change the site settings and learning data without editing source code. Saving an edit commits the updated JSON file to the `main` branch; Netlify then rebuilds the site.
+The site has a private content manager at `/admin/`, styled with JifunzeKikorea's indigo, pink, and Korean typography. It lets invited editors change the site settings and learning data without editing source code. Saving an edit commits the updated JSON file to the `main` branch; Netlify then rebuilds the site.
 
 ## Connect the site
 

@@ -1,0 +1,172 @@
+:root {
+    color-scheme: light;
+    font-family: "Inter", "Noto Sans KR", sans-serif;
+    background: #f5f7fc;
+}
+
+body {
+    background: #f5f7fc;
+    color: #26304f;
+    font-family: "Inter", "Noto Sans KR", sans-serif;
+}
+
+header[class*="-AppHeader"] {
+    position: relative;
+    border-bottom: 3px solid #ec6c9e;
+    background: linear-gradient(105deg, #111b50 0%, #253c82 64%, #456cb7 100%);
+    box-shadow: 0 5px 18px rgba(27, 39, 91, 0.16);
+}
+
+div[class*="-AppHeaderContent"]::before {
+    display: grid;
+    width: 38px;
+    height: 38px;
+    margin: 0 14px 0 4px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 13px;
+    background: linear-gradient(145deg, #f47ca7, #dc4d82);
+    box-shadow: 0 4px 12px rgba(9, 15, 49, 0.22);
+    color: #fff;
+    content: "한";
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    place-items: center;
+}
+
+div[class*="-AppHeaderContent"] nav::after {
+    margin-left: 18px;
+    color: #e8ecff;
+    content: "JIFUNZE KIKOREA  ·  CONTENT STUDIO";
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    white-space: nowrap;
+}
+
+header[class*="-AppHeader"] [class*="-AppHeaderButton"],
+header[class*="-AppHeader"] [class*="-AppHeaderNavLink"] {
+    border-radius: 10px;
+    color: #f8f9ff;
+}
+
+header[class*="-AppHeader"] [class*="-AppHeaderButton"]:hover,
+header[class*="-AppHeader"] [class*="-AppHeaderNavLink"]:hover {
+    background: rgba(255, 255, 255, 0.13);
+    color: #fff;
+}
+
+header[class*="-AppHeader"] [class*="-AppHeaderNavLink"][class*="header-link-active"] {
+    background: rgba(255, 255, 255, 0.17);
+    color: #fff;
+}
+
+div[class*="-AppMainContainer"] {
+    background: #f5f7fc;
+    font-family: "Inter", "Noto Sans KR", sans-serif;
+}
+
+aside[class*="-SidebarContainer"] {
+    border-right: 1px solid #e5e9f4;
+    background: #fff;
+    box-shadow: 3px 0 14px rgba(33, 46, 97, 0.035);
+}
+
+aside[class*="-SidebarContainer"] h2 {
+    color: #253466;
+    font-weight: 700;
+}
+
+aside[class*="-SidebarContainer"] a[class*="-SidebarNavLink"] {
+    margin: 3px 8px;
+    border-radius: 10px;
+    transition: background-color 140ms ease, color 140ms ease;
+}
+
+aside[class*="-SidebarContainer"] a[class*="-SidebarNavLink"]:hover {
+    background: #f5f1fa;
+    color: #bc3f73;
+}
+
+aside[class*="-SidebarContainer"] a[class*="-SidebarNavLink"][class*="sidebar-active"] {
+    background: linear-gradient(100deg, #fff0f5, #f1f5ff);
+    color: #a82f64;
+    font-weight: 700;
+}
+
+main[class*="-CollectionMain"] h1 {
+    color: #1c2d68;
+    font-weight: 800;
+    letter-spacing: -0.035em;
+}
+
+div[class*="-CollectionContainer"] li a {
+    border-color: #e8ebf4;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 6px 20px rgba(29, 43, 91, 0.045);
+    transition: border-color 140ms ease, box-shadow 140ms ease, transform 140ms ease;
+}
+
+div[class*="-CollectionContainer"] li a:hover {
+    transform: translateY(-2px);
+    border-color: #e98bab;
+    box-shadow: 0 12px 26px rgba(29, 43, 91, 0.09);
+}
+
+div[class*="-ToolbarContainer"] {
+    border-bottom: 1px solid #e5e9f4;
+    background: linear-gradient(100deg, #fff 0%, #fff8fb 100%);
+}
+
+div[class*="-ToolbarContainer"] [class*="-PublishedButton"] {
+    border-color: #293d83;
+    border-radius: 9px;
+    background: #293d83;
+    color: #fff;
+    font-weight: 700;
+}
+
+div[class*="-ToolbarContainer"] [class*="-PublishedButton"]:hover {
+    background: #1c2d68;
+}
+
+div[class*="-EditorContainer"] {
+    background: #f7f8fc;
+}
+
+div[class*="-ControlPaneContainer"] {
+    background: #fff;
+}
+
+div[class*="-FieldLabel"] {
+    color: #28376e;
+    font-weight: 700;
+}
+
+div[class*="-ControlPaneContainer"] input:focus,
+div[class*="-ControlPaneContainer"] textarea:focus,
+div[class*="-ControlPaneContainer"] [contenteditable="true"]:focus {
+    border-color: #df6595;
+    box-shadow: 0 0 0 3px rgba(223, 101, 149, 0.13);
+    outline: none;
+}
+
+div[class*="-PreviewPaneContainer"] {
+    background: linear-gradient(145deg, #eef3ff 0%, #fff1f6 100%);
+}
+
+@media (max-width: 700px) {
+    div[class*="-AppHeaderContent"]::before {
+        width: 32px;
+        height: 32px;
+        margin-right: 8px;
+        border-radius: 11px;
+        font-size: 18px;
+    }
+
+    div[class*="-AppHeaderContent"] nav::after {
+        display: none;
+    }
+}
